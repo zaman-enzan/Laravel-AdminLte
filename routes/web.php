@@ -32,4 +32,4 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::get('change-password', 'Auth\ChangePasswordController@index')->name('change.password');
-Route::post('update-password', 'Auth\ChangePasswordController@update');
+Route::post('update-password', 'Auth\ChangePasswordController@update')->name('update.password');

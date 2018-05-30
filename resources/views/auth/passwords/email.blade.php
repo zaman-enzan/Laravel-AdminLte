@@ -1,5 +1,5 @@
 @extends('layouts.auth')
-
+@section('title', 'Email Password Reset Link') 
 @section('content')
 <div class="login-box-body">
     <p class="login-box-msg">Reset Password</p>
@@ -12,7 +12,7 @@
 
     {!! Form::open(['url' => route('password.email')]) !!}
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            {{ Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => 'Email', 'required' => 'required', 'autofocus' => 'autofocus']) }}
+            {{ Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => 'Email', 'required' => 'required', 'autofocus' => 'autofocus', 'autocomplete' => 'off']) }}
             @if ($errors->has('email'))
                 <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>

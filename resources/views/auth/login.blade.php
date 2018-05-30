@@ -1,12 +1,12 @@
 @extends('layouts.auth')
-
+@section('title', 'Login') 
 @section('content')
 <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
     {!! Form::open(['url' => 'login']) !!}
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-            {{ Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => 'Email', 'required' => 'required', 'autofocus' => 'autofocus']) }}
+            {{ Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => 'Email', 'required' => 'required', 'autofocus' => 'autofocus', 'autocomplete' => 'off']) }}
             @if ($errors->has('email'))
                 <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>
@@ -14,7 +14,7 @@
             @endif
         </div>
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-            {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required']) }}
+            {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password', 'required' => 'required', 'autocomplete' => 'off']) }}
             @if ($errors->has('password'))
                 <span class="help-block">
                     <strong>{{ $errors->first('password') }}</strong>

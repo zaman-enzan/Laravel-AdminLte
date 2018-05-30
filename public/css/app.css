@@ -1238,7 +1238,7 @@ a:focus {
   border-color: #d2d6de;
 }
 .form-control:focus {
-  border-color: #3c8dbc;
+  border-color: #2A3F54;
   box-shadow: none;
 }
 .form-control::-moz-placeholder,
@@ -2374,6 +2374,7 @@ a:focus {
  */
 .alert {
   border-radius: 3px;
+  margin: 0px 15px;
 }
 .alert h4 {
   font-weight: 600;
